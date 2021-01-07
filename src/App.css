@@ -1,38 +1,133 @@
+body{
+  background-image: url(/Users/JaseLawson/DevMtn/unit-5/day-1/html-css-3-lab-exercise/src/ryanobull-farmhouse-photo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1{
+  color: #BB8056;
+/* text-shadow: -1px -1px 0 grey; */
+}
+
+h2{
+  color:#214e21;
+  text-shadow: -1px -1px 0 grey;
+
+}
+
+h3{
+  color:whitesmoke;
+  /* text-shadow: -1px -1px 0 grey; */
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-header{
+  position: sticky;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-button{
+  margin: 10%;
+  color:#214e21;
+  /* text-shadow: -1px -1px 0 grey; */
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: medium;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.menu-dropdown{
+  display: none;
+  color:#214e21;
+  /* text-shadow: -1px -1px 0 grey; */
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: medium;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.hamburger{
+  height: 2px;
+  width: 20px;
+  background-color: #214e21;
+  margin: 3px;
+}
+
+.mobile-menu{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 150px;
+  width: 100px;
+  /* background: white; */
+  color:#214e21;
+  position: fixed;
+  right: 40px;
+  top: 60px;
+}
+
+.main-page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+ }
+
+ .main-text{
+   width: 350px;
+ }
+
+.button{
+  height: 50px;
+  width: 100px;
+  background: transparent;
   color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover{
+  transform: scale(1.5);
+  background: #728895;
+  border: initial;
+  outline: initial;
+  border-radius: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:768px){
+
+  .menu-button{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-dropdown{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
